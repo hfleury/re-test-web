@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8081';
 
 function App() {
+  if (process.env.NODE_ENV !== 'production') {
+    console.log('Environment:', process.env.NODE_ENV);
+    console.log('API_BASE_URL:', API_BASE_URL);
+  }else {
+    console.log('Environment: production');
+  }
   console.log('API_BASE_URL:', API_BASE_URL);
   const [orderAmount, setOrderAmount] = useState('');
   const [result, setResult] = useState(null);
