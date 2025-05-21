@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8081';
 
 function App() {
+  console.log('API_BASE_URL:', API_BASE_URL);
   const [orderAmount, setOrderAmount] = useState('');
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
